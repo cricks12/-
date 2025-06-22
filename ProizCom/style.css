@@ -1,0 +1,248 @@
+/* Основной стиль сайта */
+body {
+    font-family: 'Georgia', serif;  /* Классический шрифт */
+    background-color: #f4f4f4;  /* Светлый фон */
+    color: #333;  /* Темный текст для контраста */
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    width: 120px;  /* Устанавливаем желаемую ширину логотипа */
+    height: auto;  /* Высота будет изменяться пропорционально ширине */
+    margin-right: 20px;  /* Отступ справа, чтобы не слипался с заголовком */
+    vertical-align: middle;  /* Выравнивание по вертикали для логотипа и текста */
+	border-radius: 10px;
+}
+
+/* Хедер */
+header {
+    background-color: #34495e; /* Темно-серый фон */
+    color: #fff; /* Белый цвет текста */
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;  /* Расстояние между логотипом и заголовком */
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #2ecc71;  /* Зеленый цвет для ссылок */
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для изображения на главной */
+.main-image img {
+    width: 100%; /* Изображение будет растягиваться на всю ширину блока */
+    max-width: 1200px; /* Максимальная ширина изображения */
+    height: auto; /* Сохраняем пропорции */
+    display: block; /* Убираем отступы и выравниваем изображение по блоку */
+    margin: 20px auto; /* Центрируем изображение */
+}
+
+
+
+/* Основной контейнер для контента */
+section {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff; /* Белый фон для секции */
+    border-radius: 8px;  /* Слегка закругленные углы */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Тень для эффекта */
+}
+
+/* Формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form input[type="submit"],
+form button {
+    background-color: #2ecc71;  /* Зеленый фон для кнопок */
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+    background-color: #27ae60;  /* Темно-зеленый цвет при наведении */
+}
+
+/* Заголовки */
+h2, h3 {
+    color: #34495e;  /* Темно-серый цвет заголовков */
+}
+
+/* Основной блок с информацией */
+.product, .account-info {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.product h4, .account-info h4 {
+    color: #34495e;
+    font-size: 24px;
+}
+
+.product img {
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+/* Мелкие стили */
+p, label {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Общее оформление для кнопок и ссылок */
+button, a {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Стили для страницы ошибки */
+.error {
+    text-align: center;
+    padding: 50px;
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+
+/* Стили для товаров */
+.products {
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+    gap: 20px; /* Промежутки между карточками */
+    padding: 20px;
+}
+
+.product-card {
+    display: flex; /* Горизонтальное расположение содержимого карточки */
+    width: calc(50% - 20px); /* 2 карточки в ряду */
+    background-color: #f4f4f4;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 300px; /* Минимальная высота карточки */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 300px; /* Уменьшаем размер изображения */
+    height: 300px; /* Высота изображения */
+    object-fit: cover; /* Масштабируем изображение, чтобы оно занимало весь контейнер */
+    background-color: #f4f4f4; /* Цвет фона на случай, если изображение не загружено */
+    border-radius: 8px; /* Закругляем углы изображения */
+}
+
+.product-info {
+    padding: 45px;
+margin-top: 15px;
+    flex-grow: 1; /* Текст будет занимать оставшееся пространство */
+}
+
+.product-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 1.1em;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049;
+}
+
+/* Мобильные устройства (адаптация под меньшие экраны) */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 20px); /* 2 карточки в ряду для мобильных */
+    }
+
+    .product-image {
+        height: 120px; /* Немного уменьшить высоту изображений на мобильных устройствах */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* 1 карточка в ряду для очень маленьких экранов */
+    }
+
+    .product-image {
+        height: 100px; /* Еще меньше высота для очень маленьких экранов */
+    }
+}
+
+
+
